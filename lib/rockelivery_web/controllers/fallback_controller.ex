@@ -9,4 +9,11 @@ defmodule RockeliveryWeb.FallbackController do
     |> put_view(ErrorView)
     |> render("error.json", result: result)
   end
+
+  def call(conn, {:error, error}) do
+    conn
+    |> put_status(400)
+    |> put_view(ErrorView)
+    |> render("error.json", result: error)
+  end
 end

@@ -11,11 +11,10 @@ config :rockelivery,
   ecto_repos: [Rockelivery.Repo]
 
 config :rockelivery, Rockelivery.Repo,
-    migration_primary_key: [type: :binary_id],
-    migration_foreign_key: [type: :binary_id]
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
 
-config :rockelivery, Rockelivery.Users.Create,
-  via_cep_adapter: Rockelivery.ViaCep.Client
+config :rockelivery, Rockelivery.Users.Create, via_cep_adapter: Rockelivery.ViaCep.Client
 
 # Configures the endpoint
 config :rockelivery, RockeliveryWeb.Endpoint,
@@ -47,3 +46,9 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
+
+# Guardian
+# <- Deve ser o nome do módulo em que estamos configurando
+config :rockelivery, RockeliveryWeb.Auth.Guardian,
+  Issuer: "rockelivery",
+  secret_key: "5smx4j54Oqhcg8O4XfGmv05DRaHS5NYCx3iICr6FihENz9z7fUQDBYSB4hzHhHvD"

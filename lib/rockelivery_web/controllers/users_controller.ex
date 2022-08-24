@@ -23,6 +23,14 @@ defmodule RockeliveryWeb.UsersController do
     end
   end
 
+  def sign_in(conn, params) do
+    with {:ok, token} <- Guardian.authenticate(params) do
+      conn
+      |> put_status(:created)
+      |> render("sign_in.json", token: token)
+    end
+  end
+
   def delete(conn, %{"id" => id}) do
     with {:ok, _user} <- Rockelivery.delete_user(id) do
       conn

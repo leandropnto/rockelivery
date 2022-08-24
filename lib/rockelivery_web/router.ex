@@ -8,13 +8,25 @@ defmodule RockeliveryWeb.Router do
     plug UUIDChecker
   end
 
+  # :auth é o nome do pipeline
+  pipeline :auth do
+    # Plugamos o pipeline de auth ao pipeline :auth 
+    plug RockeliveryWeb.Auth.Pipeline
+  end
+
   scope "/api", RockeliveryWeb do
     pipe_through :api
 
     get "/", WelcomeController, :index
-
-    resources("/users", UsersController, except: [:new, :edit])
     post "/users/signin", UsersController, :sign_in
+    post "/users/create", UsersController, :create
+  end
+
+  scope "/api", RockeliveryWeb do
+    pipe_through [:api, :auth]
+
+    # Removemos a action de create do resources, para adicioná-la no escopo liberado.
+    resources("/users", UsersController, except: [:new, :edit, :create])
 
     post "/items", ItemsController, :create
 

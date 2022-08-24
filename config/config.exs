@@ -52,3 +52,11 @@ import_config "#{config_env()}.exs"
 config :rockelivery, RockeliveryWeb.Auth.Guardian,
   Issuer: "rockelivery",
   secret_key: "5smx4j54Oqhcg8O4XfGmv05DRaHS5NYCx3iICr6FihENz9z7fUQDBYSB4hzHhHvD"
+
+# Guardian Pipelines
+# :rockelivery -> nome da aplicação, nome do módulo do Pipeline
+config :rockelivery, RockeliveryWeb.Auth.Pipeline,
+  # nome do módulo do Guardian na sua aplicação
+  module: RockeliveryWeb.Auth.Guardian,
+  # Nome do módulo de error handler 
+  error_handler: RockeliveryWeb.Auth.ErrorHandler

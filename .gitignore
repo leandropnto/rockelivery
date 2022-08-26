@@ -22,4 +22,9 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 rockelivery-*.tar
 
-**/.DS_Store
+**/**/.DS_Store
+.DS_Store
+*/**/.DS_Store
+lib/rockelivery/.DS_Store
+lib/rockelivery_web/.DS_Store
+

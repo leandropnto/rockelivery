@@ -13,11 +13,8 @@ config :rockelivery, Rockelivery.Repo,
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
-
-#Configuração do client de cep para os testes  
-config :rockelivery, Rockelivery.Users.Create,
-  via_cep_adapter: Rockelivery.ViaCep.ClientMock
-
+# Configuração do client de cep para os testes  
+config :rockelivery, Rockelivery.Users.Create, via_cep_adapter: Rockelivery.ViaCep.ClientMock
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.

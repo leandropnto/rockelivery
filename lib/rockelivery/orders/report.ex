@@ -30,4 +30,3 @@ defmodule Rockelivery.Orders.Report do
     "#{category},#{description},#{price},"
   end
 end
-

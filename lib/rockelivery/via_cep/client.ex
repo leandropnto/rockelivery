@@ -3,7 +3,6 @@ defmodule Rockelivery.ViaCep.Client do
   plug Tesla.Middleware.JSON
   @base_url "https://viacep.com.br/ws/"
 
-
   alias Tesla.Env
   alias Rockelivery.Error
   alias Rockelivery.ViaCep.Behaviour
@@ -11,7 +10,6 @@ defmodule Rockelivery.ViaCep.Client do
   @behaviour Behaviour
 
   def get_cep_info(url \\ @base_url, cep) do
-    
     "#{url}/#{cep}/json"
     |> get()
     |> handle_get()

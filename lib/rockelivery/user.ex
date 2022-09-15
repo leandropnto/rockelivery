@@ -1,4 +1,7 @@
 defmodule Rockelivery.User do
+  @moduledoc """
+    Módulo de usuário.
+  """
   use Ecto.Schema
   import Ecto.Changeset
 

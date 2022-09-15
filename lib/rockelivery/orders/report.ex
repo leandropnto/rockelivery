@@ -1,4 +1,7 @@
 defmodule Rockelivery.Orders.Report do
+  @moduledoc """
+    Módulo para geração de relatórios
+  """
   import Ecto.Query
   alias Rockelivery.{Repo, Order}
   alias Rockelivery.Item

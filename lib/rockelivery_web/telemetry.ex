@@ -1,4 +1,7 @@
 defmodule RockeliveryWeb.Telemetry do
+  @moduledoc """
+    Módulo de telemetry do phoenix
+  """
   use Supervisor
   import Telemetry.Metrics
 

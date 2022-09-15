@@ -1,4 +1,7 @@
 defmodule Rockelivery.Factory do
+  @moduledoc """
+    Factory para os testes do sistema
+  """
   use ExMachina.Ecto, repo: Rockelivery.Repo
 
   alias Rockelivery.User

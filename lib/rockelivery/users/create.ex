@@ -1,4 +1,7 @@
 defmodule Rockelivery.Users.Create do
+  @moduledoc """
+    Módulo de usuários - Create
+  """
   alias Rockelivery.{Error, Repo, User}
 
   @doc """

@@ -1,4 +1,7 @@
 defmodule RockeliveryWeb.Plugs.UUIDChecker do
+  @moduledoc """
+    Módulo para validar e adicionar o UUID recebido
+  """
   import Plug.Conn
   alias Ecto.UUID
   alias Plug.Conn

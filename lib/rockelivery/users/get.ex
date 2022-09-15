@@ -1,4 +1,7 @@
 defmodule Rockelivery.Users.Get do
+  @moduledoc """
+  Módulo de Usuários - Get
+  """
   alias Rockelivery.{Error, Repo, User}
 
   @doc """

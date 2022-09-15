@@ -1,4 +1,7 @@
 defmodule Rockelivery.Orders.TotalPrice do
+  @moduledoc """
+    Módulo que reduz ao valor total do item
+  """
   alias Rockelivery.Item
 
   def calculate(items) do

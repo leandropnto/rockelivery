@@ -1,4 +1,7 @@
 defmodule Rockelivery.Orders.ReportRunner do
+  @moduledoc """
+  Módulo que executa a geração de relatórios pelo GenServer
+  """
   use GenServer
   require Logger
   alias Rockelivery.Orders.Report

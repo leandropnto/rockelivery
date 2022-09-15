@@ -1,4 +1,8 @@
 defmodule Rockelivery.Stack do
+  @moduledoc """
+    Módulo de exemplo do funcionamento de um GEnServer
+
+  """
   # esse use trás o behaviour do GenServer
   use GenServer
 
@@ -25,7 +29,7 @@ defmodule Rockelivery.Stack do
     {:ok, stack}
   end
 
-  # sincrono 
+  # sincrono
   @impl true
   def handle_call({:push, element}, _from, state) do
     # sempre devemos devolver um reply (resposta), o retorno que quisermos, e o estado atualizado do genserver.
@@ -38,7 +42,7 @@ defmodule Rockelivery.Stack do
     {:reply, head, tail}
   end
 
-  # assincrono 
+  # assincrono
   @impl true
   def handle_cast({:push, element}, stack) do
     {:noreply, [element | stack]}

@@ -1,4 +1,7 @@
 defmodule Rockelivery.Orders.ValidateAndMultiplyItems do
+  @moduledoc """
+  Módulo que faz a validação e multiplicação dos itens calculando o valor total
+  """
   def call(items, items_ids, items_params) do
     items_map = Map.new(items, fn item -> {item.id, item} end)
 

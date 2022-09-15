@@ -1,4 +1,7 @@
 defmodule Rockelivery.Error do
+  @moduledoc """
+    Módulo que faz o build das mensagens de erro da API
+  """
   import Logger, only: [debug: 1]
   alias Ecto.Changeset
   @keys [:status, :result]

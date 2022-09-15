@@ -14,7 +14,6 @@ defmodule RockeliveryWeb.ErrorView do
   end
 
   def render("error.json", %{result: result}) do
-    IO.inspect("Entrou aqui no error view")
     %{message: result}
   end
 

@@ -1,4 +1,7 @@
 defmodule Rockelivery.Users.Update do
+  @moduledoc """
+  Módulo de atualização de usuários
+  """
   alias Ecto.Changeset
   alias Rockelivery.{Error, Repo, User}
 

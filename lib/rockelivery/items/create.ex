@@ -1,4 +1,7 @@
 defmodule Rockelivery.Items.Create do
+  @moduledoc """
+    Módulo de Items - Create
+  """
   alias Rockelivery.{Error, Repo, Item}
 
   @doc """

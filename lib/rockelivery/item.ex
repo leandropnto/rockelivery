@@ -1,4 +1,7 @@
 defmodule Rockelivery.Item do
+  @moduledoc """
+    Módulo de items
+  """
   use Ecto.Schema
   import Ecto.Changeset
 

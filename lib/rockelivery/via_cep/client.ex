@@ -1,4 +1,8 @@
 defmodule Rockelivery.ViaCep.Client do
+  @moduledoc """
+    Módulo cliente para a consulta de CEP
+
+  """
   use Tesla
   plug Tesla.Middleware.JSON
   @base_url "https://viacep.com.br/ws/"

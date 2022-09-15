@@ -1,4 +1,8 @@
 defmodule Rockelivery.Orders.Create do
+  @moduledoc """
+    Módulo para a criação de Ordens
+
+  """
   alias Rockelivery.{Error, Item, Order, Repo}
   alias Rockelivery.Orders.ValidateAndMultiplyItems
 

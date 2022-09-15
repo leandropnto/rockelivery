@@ -1,4 +1,7 @@
 defmodule RockeliveryWeb.Auth.Guardian do
+  @moduledoc """
+    Configuração do Guardian
+  """
   use Guardian, otp_app: :rockelivery
 
   alias Rockelivery.User

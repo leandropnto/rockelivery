@@ -1,4 +1,7 @@
 defmodule Rockelivery.Users.Delete do
+  @moduledoc """
+    Módulo de Usuários - Delete
+  """
   alias Ecto.Changeset
   alias Rockelivery.{Error, Repo, User}
 

@@ -1,6 +1,10 @@
 # Rockelivery
 
+[![codecov](https://codecov.io/github/leandropnto/rockelivery/branch/main/graph/badge.svg?token=M94D6S098H)](https://codecov.io/github/leandropnto/rockelivery)
+
 *Projeto do curso Ignite da Rocketseat*
+
+
 
 
 Instruções:
